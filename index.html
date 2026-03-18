@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebecca Upton - Junior Front-End Developer</title>
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/5dc87e2c0a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- progress bar -->
+    <div class="progress-bar"></div>
+
+    <!-- back to top button -->
+    <button class="back-to-top hidden" title="back to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="back-to-top-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 18.75 7.5-7.5 7.5 7.5"
+        />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m4.5 12.75 7.5-7.5 7.5 7.5"
+        />
+      </svg>
+    </button>
+
+    <!-- header -->
+    <header class="header">
+      <div class="logo">REBECCA UPTON</div>
+      <!-- theme toggle -->
+
+      <nav>
+        <a href="#home" title="Home">HOME</a>
+        <a href="#about" title="About Me">ABOUT ME</a>
+        <a href="#projects" title="My Projects">PROJECTS</a>
+        <a href="#contact" title="Contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <div class="toggle">
+      <input id="theme-toggle" type="checkbox" />
+      <label for="theme-toggle"></label>
+    </div>
+
+    <!-- hero -->
+    <section id="home" class="section hero">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <h1>I'm <span class="heroname">Rebecca</span></h1>
+            <h3>A Junior Front-End Developer based in the UK</h3>
+            <p>
+              Why not view some of my work below,<br />or say hi
+              <a href="mailto:reb.upton84@gmail.com" title="Send me an email"
+                >via email</a
+              >
+              or
+              <a
+                href="https://www.linkedin.com/in/rebecca-upton"
+                target="_blank"
+                title="LinkedIn profile"
+                >linkedin</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="aboutme">
+          <div class="about">
+            <h3>Packaging Design Background</h3>
+            <p>
+              For nearly two decades, I worked in corrugated manufacturing as a
+              graphic and structural designer. I specialized in creating
+              packaging solutions that balanced form and function.
+            </p>
+          </div>
+          <div class="about">
+            <h3>Web Development Transition</h3>
+            <p>
+              Recently, I've begun an exciting new chapter in web design and
+              front-end development. Through platforms like SheCodes, Scrimba and
+              Codecademy, I'm building skills in HTML, CSS, JavaScript and more.
+            </p>
+          </div>
+          <div class="about">
+            <h3>Creative Evolution</h3>
+            <p>
+              I'm applying my design experience from the physical world to
+              digital spaces. My background gives me a unique perspective on
+              user experience and visual communication across both mediums.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="recent-projects">
+          <!-- NOOK -->
+          <div class="project-card">
+            <img src="assets/imgs/mnook.png" class="project-image" />
+            <h3 class="project-title">Spotify Playlist Builder</h3>
+            <p class="project-description">
+              A React web application that allows users to search the Spotify
+              library, create a custom playlist, then save it to their Spotify
+              account.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://music-nook.vercel.app/"
+                target="_blank"
+                title="Spotify Playlist Builder"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- WEATHER -->
+          <div class="project-card">
+            <img src="assets/imgs/work1.png" class="project-image" />
+            <h3 class="project-title">Vanilla JS Weather App</h3>
+            <p class="project-description">
+              A basic weather app created with HTML, CSS, Bootstrap, and
+              JavaScript, utilizing the Open Weather Map API.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://shecodesplus-final-weather-app.vercel.app/"
+                target="_blank"
+                title="JavaScript Weather App"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- TWO -->
+          <div class="project-card">
+            <img src="assets/imgs/work2.png" class="project-image" />
+            <h3 class="project-title">React Weather App</h3>
+            <p class="project-description">
+              Another weather app built within a React framework.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://weather-app-react-zeta-flame.vercel.app/"
+                target="_blank"
+                title="React Weather App"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- CLOCK -->
+          <div class="project-card">
+            <img src="assets/imgs/work3.png" class="project-image" />
+            <h3 class="project-title">World Clock</h3>
+            <p class="project-description">
+              A world clock app built with HTML, CSS, Bootstrap, and JavaScript
+              that displays the time for several global locations.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://world-clock-xi.vercel.app/"
+                target="_blank"
+                title="World Clock"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- DICTIONARY -->
+          <div class="project-card">
+            <img src="assets/imgs/work5.png" class="project-image" />
+            <h3 class="project-title">React Dictionary App</h3>
+            <p class="project-description">
+              A simple dictionary app built with React.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://dictionary-app-react-orpin.vercel.app/"
+                target="_blank"
+                title="React Dictionary App"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- POEM -->
+          <div class="project-card">
+            <img src="assets/imgs/work6.png" class="project-image" />
+            <h3 class="project-title">AI Poem Generator</h3>
+            <p class="project-description">
+              An AI-powered poem generator developed with JavaScript.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://poem-generator-ten.vercel.app/"
+                target="_blank"
+                title="AI Poem Generator"
+                >Launch</a
+              >
+            </div>
+          </div>
+          <!-- WEB -->
+          <div class="project-card">
+            <img src="assets/imgs/work4.png" class="project-image" />
+            <h3 class="project-title">Travel Website</h3>
+            <p class="project-description">
+              A responsive travel page built with HTML, CSS and Bootstrap.
+            </p>
+            <div class="button-container">
+              <a
+                class="project-button"
+                href="https://edinburgh-travel-project.vercel.app/"
+                target="_blank"
+                title="Responsive Travel Website"
+                >Launch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contactme">
+          <div class="contact-text">
+            <p>
+              If you'd like to chat about the work you have seen on my page, or
+              are interested in working together, then please get in touch.
+            </p>
+          </div>
+          <div class="social-links">
+            <a href="mailto:reb.upton84@gmail.com" title="Email Me!">
+              <i class="fa-regular fa-envelope"></i
+            ></a>
+
+            <a
+              href="https://www.linkedin.com/in/rebecca-upton"
+              target="_blank"
+              title="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i
+            ></a>
+
+            <a href="https://github.com/reb84" target="_blank" title="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+
+            <a
+              href="https://www.dropbox.com/scl/fi/srn9650z2dnfqnpc3azl0/RebeccaUpton_CV_2026.pdf?rlkey=zwq683pgcavdrlngkvc0rfzr4&st=jzhwnbn5&dl=1"
+              target="_blank"
+              title="Resume"
+              ><i class="fa-regular fa-file-pdf"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer><p>© 2025 Rebecca Upton</p></footer>
+
+    <!-- javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>

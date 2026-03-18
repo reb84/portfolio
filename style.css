@@ -1,0 +1,626 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #FFFCF0;
+    --primary-txt: #343331;
+    --primary-accent: #D14D41;
+    --primary-hover-accent: #AF3029;
+    --border-line: #F2F0E5;
+    --primary-hover-text: var(--primary-bg);
+
+    --header-font: 'Playfair Display', serif;
+    --main-font: 'JetBrains Mono', monospace;
+}
+
+.dark-mode {
+    --primary-bg: #121212;
+    --primary-txt: #CECDC3;
+    --primary-accent: #D14D41;
+    --primary-hover-accent: #E6E4D9;
+    --border-line: #282726;
+    --primary-hover-text: var(--primary-accent);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--primary-bg);
+    color: var(--primary-txt);
+}
+
+h3 {
+    font-weight: 400;
+    color: var(--primary-accent);
+}
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 6px;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1000;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid var(--border-line);
+}
+
+.logo {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav a {
+    color: var(--primary-accent);
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 5px;
+    position: relative;
+}
+
+nav a:after,
+.hero-content a:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 65%;
+    left: -0.1em;
+    right: 1em;
+    bottom: 0;
+    transition: all 300ms;
+    background-color: transparent;
+}
+
+nav a:hover,
+.hero-content a:hover {
+    color: #fff;
+}
+
+nav a:hover:after,
+.hero-content a:hover:after {
+    top: 0%;
+    right: -0.1em;
+    background-color: var(--primary-accent);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content a {
+    color: var(--primary-accent);
+    text-decoration: none;
+    font-style: italic;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-family: var(--header-font);
+    font-weight: 300;
+    color: var(--primary-accent);
+}
+
+.heroname {
+    color: var(--primary-txt);
+    font-style: italic;
+    font-size: 6rem;
+}
+
+.hero-content h3 {
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.aboutme {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about {
+    text-align: center;
+    width: 30%;
+}
+
+.about h3 {
+    margin-bottom: 15px;
+}
+
+/* Recent Projects Section */
+.recent-projects {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.project-card {
+    flex: 0 0 calc(30% - 1rem);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    transition: transform .5s ease;
+    overflow: hidden;
+    border: 1px solid var(--border-line);
+    padding: 4px;
+}
+
+.project-image:hover {
+    transform: scale(1.06);
+}
+
+.project-title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.project-description {
+    text-align: center;
+    margin-bottom: 1.3rem;
+    flex-grow: 1;
+    font-size: 0.875rem;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: auto;
+}
+
+.project-button {
+    display: inline-block;
+    background-color: var(--primary-accent);
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.project-button:hover {
+    background-color: var(--primary-hover-accent);
+    transform: translateY(-2px);
+    color: var(--primary-hover-text);
+}
+
+/* Contact Section */
+.contactme {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-text {
+    text-align: right;
+    width: 40%;
+}
+
+.social-links {
+    width: 40%;
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 3rem;
+    margin-right: 50px;
+    color: var(--primary-accent);
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-hover-accent);
+}
+
+.social-links a::before {
+    content: attr(title);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: var(--primary-accent);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.social-links a:hover::before {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* Footer */
+footer p {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+
+/* Back To Top */
+.back-to-top {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+}
+
+.back-to-top-icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--primary-accent);
+}
+
+.back-to-top:hover {
+    opacity: 60%;
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 0.2rem;
+    background: var(--primary-accent);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+}
+
+
+/* Theme Toggle */
+
+.toggle {
+    cursor: pointer;
+    top: 80px;
+    right: 20px;
+    position: relative;
+    float: right;
+}
+
+.toggle input {
+    display: none;
+}
+
+.toggle label {
+    display: block;
+    width: 40px;
+    height: 22px;
+    padding: 2px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-accent);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle label::after {
+    content: "";
+    display: inherit;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: var(--primary-accent);
+    transition: 0.3s;
+}
+
+.toggle input:checked~label {
+    border-color: var(--primary-hover-accent);
+}
+
+.toggle input:checked~label::after {
+    translate: 17px 0;
+    background: var(--primary-hover-accent);
+}
+
+
+/* Responsive */
+
+/* Extra Small Screens (Mobile) */
+@media only screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+
+    /* Header/Navigation */
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px 10px;
+    }
+
+    /* Hero Section */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .heroname {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Layouts */
+    .aboutme,
+    .recent-projects,
+    .contactme {
+        flex-direction: column;
+    }
+
+    /* About Section */
+    .about {
+        width: auto;
+    }
+
+    .about h3 {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    /* Project Section */
+    .project-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-links {
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 3rem;
+        margin: 30px 20px;
+    }
+
+    /* Back To Top */
+    .back-to-top {
+        display: none;
+    }
+}
+
+/* Small Screens (Tablets) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    /* Layout adjustments same as mobile */
+    .aboutme,
+    .recent-projects,
+    .contactme {
+        flex-direction: column;
+    }
+
+    /* Header adjustments same as mobile */
+    .header {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px 10px;
+    }
+
+    /* Hero text adjustments */
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .heroname {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    /* About Section */
+    .about {
+        width: auto;
+    }
+
+    .about h3 {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    /* Projects Section */
+    .project-button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-links {
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 3rem;
+        margin: 30px 20px;
+    }
+
+    /* Back To Top */
+    .back-to-top {
+        display: none;
+    }
+}
+
+/* Medium Screens (Large Tablets) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+
+    .aboutme,
+    .contactme {
+        flex-direction: column;
+    }
+
+    /* About Section */
+    .about {
+        width: auto;
+    }
+
+    .about h3 {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    /* Projects Section */
+    .project-card {
+        flex: 0 0 calc(48% - 1rem);
+    }
+
+
+
+    /* Contact Section */
+    .contact-text {
+        text-align: center;
+        width: 100%;
+    }
+
+    .social-links {
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 3rem;
+        margin: 30px 20px;
+    }
+
+    /* Back To Top */
+    .back-to-top {
+        display: none;
+    }
+}
+
+/* Large Screens (Desktops) */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        width: 80%;
+    }
+
+    .aboutme,
+    .contactme {
+        flex-direction: column;
+    }
+
+    /* About Section */
+    .about {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .about h3 {
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+    /* Projects Section */
+    .project-card {
+        flex: 0 0 calc(40% - 1rem);
+    }
+
+    /* Contact Section */
+    .contact-text {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .social-links {
+        width: 100%;
+    }
+
+    .social-links a {
+        font-size: 3rem;
+        margin: 30px 20px;
+    }
+}
