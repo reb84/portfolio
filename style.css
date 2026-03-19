@@ -230,6 +230,95 @@ nav a:focus {
     margin: 0 auto;
 }
 
+/* hero */
+
+.hero-inner {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 640px;
+}
+
+.hero-content h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--txt);
+    margin-bottom: 1rem;
+}
+
+.heroname {
+    font-style: italic;
+    color: var(--accent);
+    display: block;
+    font-size: 1.15em;
+}
+
+.hero-sub {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--txt-muted);
+    margin-bottom: 1.5rem;
+}
+
+.hero-body {
+    font-size: 0.95rem;
+    color: var(--txt-muted);
+}
+
+.hero-content a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--accent-soft);
+    transition: text-decoration-color 0.2s;
+    font-style: italic;
+}
+
+.hero-content a:hover,
+.hero-content a:focus {
+    text-decoration-color: var(--accent);
+    outline: none;
+}
+
+
+/* about */
+
+#about {
+    background: var(--bg-alt);
+}
+
+.aboutme {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.about {
+    width: 30%;
+}
+
+.about h3 {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--txt);
+    margin-bottom: 0.75rem;
+}
+
+.about p {
+    font-size: 0.88rem;
+    color: var(--txt-muted);
+    line-height: 1.85;
+}
+
 
 /* projets */
 .recent-projects {
