@@ -24,12 +24,16 @@
 
 /* DARK MODE */
 .dark-mode {
-    --primary-bg: #121212;
-    --primary-txt: #CECDC3;
-    --accent: #D14D41;
-    --primary-hover-accent: #E6E4D9;
-    --border-line: #282726;
-    --primary-hover-text: var(--accent);
+    --bg: #1a1c19;
+        --bg-alt: #222420;
+        --txt: #dddbd0;
+        --txt-muted: #888878;
+        --accent: #7a9e7a;
+        --accent-dark: #9aba9a;
+        --accent-soft: #2a3a2a;
+        --border: #333530;
+        --tag-bg: #2a3a2a;
+        --tag-txt: #9aba9a;
 }
 
 
@@ -83,12 +87,14 @@ body {
 
 /* progress bar */
 .progress-bar {
-    height: 0.2rem;
+    height: 4px;
     background: var(--accent);
     position: fixed;
     top: 0;
     left: 0;
+    width: 0;
     z-index: 1050;
+    transition: width 0.1s linear;
 }
 
 
@@ -120,6 +126,7 @@ body {
 
 
 /* HEADER */
+
 .header {
     position: fixed;
     top: 0;
@@ -137,7 +144,7 @@ body {
 }
 
 .logo {
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.04em;
@@ -500,7 +507,7 @@ nav a:focus {
     bottom: -2.2rem;
     left: 50%;
     transform: translateX(-50%) scale(0.9);
-    background: var(--txt);
+    background: var(--accent-dark);
     color: var(--bg);
     padding: 3px 10px;
     border-radius: 4px;
