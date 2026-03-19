@@ -233,6 +233,8 @@ nav a:focus {
     background: var(--accent);
 }
 
+/* MAIN */
+
 /* sections */
 .section {
     min-height: 100vh;
@@ -339,7 +341,32 @@ nav a:focus {
 }
 
 
-/* projets */
+/* projects */
+.section-title {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--txt-muted);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* extra space */
+.section-title--spaced {
+    margin-top: 4rem;
+}
+
 .recent-projects {
     display: flex;
     flex-wrap: wrap;
