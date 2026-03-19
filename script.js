@@ -23,6 +23,9 @@ const goToTop = () => {
 
 backToTopButton.addEventListener("click", goToTop);
 
+
+
+            
 // Progress Bar
 
 const pageProgressBar = document.querySelector(".progress-bar");
