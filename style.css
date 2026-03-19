@@ -344,3 +344,100 @@ nav a:focus {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
+
+
+
+/* contact */
+#contact {
+    background: var(--bg-alt);
+}
+
+.contactme {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact-text {
+    text-align: right;
+    width: 40%;
+}
+
+.contact-text p {
+    font-size: 0.92rem;
+    color: var(--txt-muted);
+    line-height: 1.85;
+}
+
+.social-links {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    font-size: 1.25rem;
+    color: var(--txt-muted);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--bg);
+    transition: color 0.25s, border-color 0.25s, background 0.25s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: var(--accent-soft);
+}
+
+.social-links a:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.social-links a::before {
+    content: attr(title);
+    position: absolute;
+    bottom: -2.2rem;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+    background: var(--txt);
+    color: var(--bg);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.social-links a:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+
+/* footer */
+footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+footer p {
+    font-family: var(--font-sans);
+    font-size: 0.78rem;
+    color: var(--txt-muted);
+    letter-spacing: 0.04em;
+}
